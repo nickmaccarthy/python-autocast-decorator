@@ -1,0 +1,21 @@
+*.pyc
+arrow_test.py
+dm_pretty.py
+ranges.py
+tztest.py
+
+# general things to ignore
+build/
+dist/
+*.egg-info/
+*.egg
+*.py[cod]
+__pycache__/
+*.so
+*~
+
+# due to using tox and pytest
+.tox
+.cache
+
+build.sh
