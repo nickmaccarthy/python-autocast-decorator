@@ -53,7 +53,7 @@ def estimateTypedValue(var):
     for caster in (boolify, int, float, noneify, listify, str):
         try:
             return caster(var)
-        except ValueError, e:
+        except ValueError as e:
             pass
 
 def autocast(dFxn):
@@ -65,7 +65,7 @@ def autocast(dFxn):
 
 @autocast
 def test(one, two):
-       print one, two, type(one), type(two)
+       print(one, two, type(one), type(two))
 
 
 # todo: dictify
