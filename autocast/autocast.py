@@ -65,7 +65,7 @@ def autocast(dFxn):
 
 @autocast
 def test(one, two):
-       print(one, two, type(one), type(two))
+    print(one, two, type(one), type(two))
 
 
 # todo: dictify
