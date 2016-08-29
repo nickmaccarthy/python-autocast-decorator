@@ -1,6 +1,7 @@
 #import unittest2 as unittest
 import unittest
 from autocast import autocast
+import sys
 
 
 @autocast
@@ -44,8 +45,11 @@ class TestDM(unittest.TestCase):
 
 
     def testNone(self):
-        self.assertIsNone(noneit('none'))
-        self.assertIsNone(noneit('None'))
+        if sys.version_info > ( 2, 7, 0 ):
+            self.assertIsNone(noneit('none'))
+            self.assertIsNone(noneit('None'))
+        else: # we are on 2.6 or before, we will skip the none test
+            return True
 
 if __name__ == "__main__":
     unittest.main()
